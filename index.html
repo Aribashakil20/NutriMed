@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriMed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>NutriMed: Health Check</h1>
+        <form id="healthForm">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+
+            <label for="bp">Blood Pressure (e.g., 120/80):</label>
+            <input type="text" id="bp" name="bp" required>
+
+            <label for="diabetes">Diabetes Level (e.g., 90):</label>
+            <input type="number" id="diabetes" name="diabetes" required>
+
+            <button type="button" onclick="calculateHealth()">Submit</button>
+        </form>
+
+        <div id="results" style="display: none;">
+            <h2>Your Results:</h2>
+            <p id="bmiResult"></p>
+            <p id="foodRecommendation"></p>
+            <p id="medicineRecommendation"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
